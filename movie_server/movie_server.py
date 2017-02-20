@@ -20,3 +20,7 @@ def create():
 @app.route('/movies')
 def movies():
 	return jsonify("all the movies")
+
+@app.route('/search', methos = ['POST'])
+def search():
+	return jsonify("posted to search")
