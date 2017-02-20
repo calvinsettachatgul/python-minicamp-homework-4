@@ -40,9 +40,8 @@ def movies():
 	cursor = connection.cursor()
 	if request.method == "GET":
 		try:
-			all_movies_cursor = cursor.excecute('SELECT * FROM movies')
-			# print( all_movies_cursor )
-			# results = all_movies_cursor.fetchall()
+			all_movies_cursor = cursor.execute('SELECT * FROM movies')
+			results = all_movies_cursor.fetchall()
 		except:
 			return "something wrong"
 		finally:
