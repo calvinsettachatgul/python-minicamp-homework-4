@@ -6,7 +6,7 @@
 </head>
 <body>
 	<p>Enter a New Movie</p>
-	<form method ="POST" name = "new_movie">
+	<form method ="POST" action ="{{ url_for("create") }}">
 		<input type="text" name = "title" />
 		<input type="submit" value="submit" />
 	</form>
