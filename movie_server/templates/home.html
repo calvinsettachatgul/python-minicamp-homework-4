@@ -5,6 +5,11 @@
 </title>
 </head>
 <body>
-<p>Hello World</p>
+<p>This is Move Server</p>
+ <p>Enter a New Movie</p>
+        <form method ="POST" action ="{{ url_for("movie") }}">
+                <input type="text" name = "title"></input>
+                <input type="submit" value="submit"/>
+        </form>
 <a href="/movies">MOVIES</a>
 </body>
