@@ -21,6 +21,6 @@ def create():
 def movies():
 	return jsonify("all the movies")
 
-@app.route('/search', methos = ['POST'])
+@app.route('/search', methods = ['POST'])
 def search():
 	return jsonify("posted to search")
