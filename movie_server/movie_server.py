@@ -48,15 +48,14 @@ def movies():
 			connection.close()
 		return jsonify( results)
 
-@app.route('/search', methods = ['POST'])
+@app.route('/search', methods = ['GET'])
 def search():
 	print( "hit search" )
 	title = request.args.get("title")
-	print( request.args.get("name=title"))
 	print( title )
 	connection = sqlite3.connect("database.db")
 	cursor = connection.cursor()
-	if request.method == "POST":
+	if request.method == "GET":
 		try:
 			title_query = "SELECT * FROM movies WHERE title = \"{}\"".format( title )
 			query_result_cursor = cursor.execute( title_query )	
