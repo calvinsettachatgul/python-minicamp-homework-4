@@ -6,13 +6,19 @@
 <link rel="stylesheet" type="text/css" href="/static/styles/styles.css"/> </head> 
 
 <body>
-this is some text
-<p>Something This is Move Server</p>
+<p>This is Movie Server</p>
 
- <p>Enter a New Movie</p>
-        <form method ="POST" action ="{{ url_for("movie") }}">
-                <input type="text" name = "title"></input>
-                <input type="submit" value="submit"/>
-        </form>
+<form method ="POST" action ="{{ url_for("movie") }}">
+	<h3>Enter a New Movie</h3>
+	<input type="text" name = "title"></input>
+	<input type="submit" value="submit"/>
+</form>
+
+<form action="{{ url_for("search") }}" method ="POST">
+        <h3>Search</h3>
+        <input type="text" name = "title" ></input>
+        <input type="submit" value="search" />
+</form>
+
 <a href="/movies">MOVIES</a>
 </body>
